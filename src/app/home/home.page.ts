@@ -74,7 +74,7 @@ async presentAlertPromptDelete(index: number) {
       {
         text: 'Excluir',
         handler: () => {
-          this.filmeService.delFilme(index);
+          this.filmeService.delTarefas(index);
         }
       }
     ]
@@ -108,7 +108,7 @@ async presentAlertPromptUpdate(index: number, tarefa: any) {
         text: 'Salvar',
         handler: (alertData) => {
           if (alertData.tarefa != "") {
-            this.filmeService.updateFilmes(index, alertData.tarefa, alertData.date);
+            this.filmeService.updateTarefas(index, alertData.tarefa, alertData.date);
           }
           else {
             this.presentToast();
